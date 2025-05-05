@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Biodata</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #333; padding: 10px 20px; color: white; }
+    nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+    nav ul li { display: inline; }
+    nav ul li a { color: white; text-decoration: none; }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: #f0f0f0;
+    }
+    .hero .title { font-size: 28px; font-weight: bold; }
+    .hero img { width: 200px; height: auto; border-radius: 8px; }
+
+    .section {
+      padding: 30px 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .biodata-table td {
+      width: 33.3%;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: Menu -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#">Portofolio</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section 2: Judul + Gambar -->
+  <section class="hero">
+    <div class="title">
+      <h1>Selamat Datang di Profil Saya</h1>
+    </div>
+    <div>
+      <img src="https://cdn1-production-images-kly.akamaized.net/4DnWuXDuKCZEfsGn7cfzeMC36jU=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2187831/original/023393200_1525765453-152576545284444ini-rahasia-cantik-ikon-pop-sepanjang-masa-marilyn-monroe-150923g_thumbnail.jpg" alt="Foto Profil">
+    </div>
+  </section>
+
+  <!-- Section 3: Biodata -->
+  <section class="section">
+    <h2>Biodata</h2>
+    <table class="biodata-table">
+      <tr>
+        <td><strong>Nama:</strong>Song</td>
+        <td><strong>Tempat, Tanggal Lahir:</strong> Tulungagung, 10 Jan 1978</td>
+        <td><strong>Jenis Kelamin:</strong> Laki-laki seutuhnya</td>
+      </tr>
+      <tr>
+        <td><strong>Alamat:</strong> Jl. aspal No. 123</td>
+        <td><strong>Email:</strong> song123@contoh.com</td>
+        <td><strong>Telepon:</strong> 0812-3456-7890</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Section 4: Portofolio -->
+  <section class="section">
+    <h2>Portofolio</h2>
+    <table>
+      <tr>
+        <th>Nama Proyek</th>
+        <th>Deskripsi</th>
+        <th>Tahun</th>
+      </tr>
+      <tr>
+        <td>Website Toko Online</td>
+        <td>Membuat website e-commerce menggunakan Laravel dan React</td>
+        <td>2022</td>
+      </tr>
+      <tr>
+        <td>Aplikasi Mobile</td>
+        <td>Pengembangan aplikasi Android untuk manajemen tugas</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>Dashboard Admin</td>
+        <td>Desain dan backend dashboard manajemen data</td>
+        <td>2024</td>
+      </tr>
+    </table>
+  </section>
+
+</body>
+</html>
