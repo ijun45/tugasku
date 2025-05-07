@@ -1,49 +1,141 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Profil Biodata Song</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #000000; padding: 5px 20px; color: rgb(112, 7, 7); }
-    nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-    nav ul li { display: inline; }
-    nav ul li a { color: rgb(172, 180, 172); text-decoration: none; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f6fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #3a0ca3, #4361ee);
+      padding: 15px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #ffd60a;
+    }
 
     .hero {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       align-items: center;
-      padding: 10px 20px;
-      background-color: #566899;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #4361ee, #4cc9f0);
+      color: white;
     }
-    .hero .title { font-size: 28px; font-weight: bold; }
-    .hero img { width: 200px; height: auto; border-radius: 8px; }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      margin: 10px 0;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      border: none;
+      background: #ffd60a;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hero img {
+      width: 200px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
 
     .section {
-      padding: 30px 20px;
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 10px;
-    }
-    table, th, td {
-      border: 1px solid #4e4949;
-    }
-    th, td {
-      padding: 5px;
+    .section h2 {
       text-align: center;
+      color: #3a0ca3;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
     }
 
-    .biodata-table td {
-      width: 30%;
+    .biodata-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    h2 {
-      margin-bottom: 10px;
+    .biodata-item {
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #4cc9f0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .biodata-item strong {
+      color: #3a0ca3;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-card {
+      background: #ffffff;
+      border-left: 6px solid #4895ef;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-card h3 {
+      margin-top: 0;
+      color: #560bad;
+    }
+
+    .portfolio-card .year {
+      margin-top: 10px;
+      color: #3f3f3f;
+      font-size: 0.9rem;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -53,7 +145,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#">Header</a></li>
+        <li><a href="#">Beranda</a></li>
         <li><a href="#">Biodata</a></li>
         <li><a href="#">Portofolio</a></li>
       </ul>
@@ -64,56 +156,59 @@
   <section class="hero">
     <div class="title">
       <h1>Selamat Datang di Profil Saya</h1>
-      <p>Ini adalah contoh header dengan dua kolom kiri berisi teks seperti ini</p>
+      <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
       <button>Pelajari lebih lanjut</button>
     </div>
     <div>
-      <img src="https://www.pngkey.com/png/full/276-2760139_85kib-463x600-05ba8b35acc7edfd-keanu-reeves.png" alt="Foto Profil">
+      <img src="https://www.pngkey.com/png/full/276-2760139_85kib-463x600-05ba8b35acc7edfd-keanu-reeves.png" alt="Foto Profil" />
     </div>
   </section>
 
   <!-- Section 3: Biodata -->
   <section class="section">
     <h2>Biodata</h2>
-    <table class="biodata-table">
-      <tr>
-        <td><strong>Nama:</strong>Song</td>
-        <td><strong>Tempat, Tanggal Lahir:</strong> Tulungagung, 10 Jan 1978</td>
-        <td><strong>Jenis Kelamin:</strong> Laki-laki seutuhnya</td>
-      </tr>
-      <tr>
-        <td><strong>Alamat:</strong> Jl. aspal No. 123</td>
-        <td><strong>Email:</strong> song123@contoh.com</td>
-        <td><strong>Telepon:</strong> 0812-3456-7890</td>
-      </tr>
-    </table>
+    <div class="biodata-grid">
+      <div class="biodata-item">
+        <strong>Nama</strong>Song
+      </div>
+      <div class="biodata-item">
+        <strong>Tempat, Tanggal Lahir</strong>Tulungagung, 10 Jan 1978
+      </div>
+      <div class="biodata-item">
+        <strong>Jenis Kelamin</strong>Laki-laki seutuhnya
+      </div>
+      <div class="biodata-item">
+        <strong>Alamat</strong>Jl. Aspal No. 123
+      </div>
+      <div class="biodata-item">
+        <strong>Email</strong>song123@contoh.com
+      </div>
+      <div class="biodata-item">
+        <strong>Telepon</strong>0812-3456-7890
+      </div>
+    </div>
   </section>
 
   <!-- Section 4: Portofolio -->
   <section class="section">
     <h2>Portofolio</h2>
-    <table>
-      <tr>
-        <th>Nama Proyek</th>
-        <th>Deskripsi</th>
-        <th>Tahun</th>
-      </tr>
-      <tr>
-        <td>Website Toko Online</td>
-        <td>Membuat website e-commerce menggunakan Laravel dan React</td>
-        <td>2022</td>
-      </tr>
-      <tr>
-        <td>Aplikasi Mobile</td>
-        <td>Pengembangan aplikasi Android untuk manajemen tugas</td>
-        <td>2023</td>
-      </tr>
-      <tr>
-        <td>Dashboard Admin</td>
-        <td>Desain dan backend dashboard manajemen data</td>
-        <td>2024</td>
-      </tr>
-    </table>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <h3>Website Toko Online</h3>
+        <p>Membuat website e-commerce menggunakan Laravel dan React</p>
+        <div class="year">2022</div>
+      </div>
+      <div class="portfolio-card">
+        <h3>Aplikasi Mobile</h3>
+        <p>Pengembangan aplikasi Android untuk manajemen tugas</p>
+        <div class="year">2023</div>
+      </div>
+      <div class="portfolio-card">
+        <h3>Dashboard Admin</h3>
+        <p>Desain dan backend dashboard manajemen data</p>
+        <div class="year">2024</div>
+      </div>
+    </div>
   </section>
 
 </body>
